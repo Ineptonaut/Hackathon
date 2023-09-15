@@ -22,17 +22,20 @@ namespace Hack
             {
                 encrypt();
             }
+            Console.ReadKey();
         }
 
         public static void decrypt()
         {
             //input string of numbers
-            string input = Console.ReadLine();
+            string input = "";
+            Console.WriteLine("Enter input string: ");
+            input = Console.ReadLine();
             //split string by each 3rd number
             List<string> temp = new List<string>();
-            for (int i = 0; i < input.Length; i++)
+            for (int i = 0; i <= input.Length; i++)
             {
-                temp.Add(input.Substring(i, 3));
+                temp.Add(input.split);
             }
             //translate ascii codes into plaintext
             string output = "";
