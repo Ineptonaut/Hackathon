@@ -12,7 +12,7 @@ namespace Hack
     {
         static void Main(string[] args)
         {
-            int input;
+            var input = 0;
             Console.WriteLine("Decrypt or encrypt? 1/2");
             input = int.Parse(Console.ReadLine());
             if (input == 1)
