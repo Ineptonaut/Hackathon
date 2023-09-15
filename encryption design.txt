@@ -1,0 +1,5 @@
+input string of numbers 
+split string by each 3rd number
+store each group of numbers in an array 
+translate ascii codes into plaintext
+reassemble string 
