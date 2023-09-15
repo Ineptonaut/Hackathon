@@ -42,7 +42,7 @@ namespace Hack
             string output = "";
             foreach (var item in temp)
             {
-                var result = (char.ConvertFromUtf32(int.Parse(item)));
+                var result = char.ConvertFromUtf32(int.Parse(item));
                 output += result;
             }
             //reassemble string 
@@ -51,7 +51,16 @@ namespace Hack
 
         public static void encrypt() 
         {
-
+            string input = "";
+            Console.WriteLine("Enter input string");
+            input = Console.ReadLine();
+            byte[] bytes = Encoding.ASCII.GetBytes (input);
+            string output = "";
+            foreach (byte item in bytes)
+            {
+                output += item.ToString();
+            }
+            Console.WriteLine(output);
         }
 
         public static IEnumerable<String> SplitInParts(this String s, Int32 partLength)
