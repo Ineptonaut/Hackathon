@@ -1,0 +1,7 @@
+C:\Users\James\Desktop\Hackathon\Hack\bin\Debug\Hack.exe.config
+C:\Users\James\Desktop\Hackathon\Hack\bin\Debug\Hack.exe
+C:\Users\James\Desktop\Hackathon\Hack\bin\Debug\Hack.pdb
+C:\Users\James\Desktop\Hackathon\Hack\obj\Debug\Hack.csproj.AssemblyReference.cache
+C:\Users\James\Desktop\Hackathon\Hack\obj\Debug\Hack.csproj.CoreCompileInputs.cache
+C:\Users\James\Desktop\Hackathon\Hack\obj\Debug\Hack.exe
+C:\Users\James\Desktop\Hackathon\Hack\obj\Debug\Hack.pdb
