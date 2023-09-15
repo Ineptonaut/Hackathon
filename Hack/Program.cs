@@ -8,7 +8,7 @@ using System.Web;
 
 namespace Hack
 {
-    internal class Program
+    internal static class Program
     {
         static void Main(string[] args)
         {
@@ -33,7 +33,7 @@ namespace Hack
             Console.WriteLine("Enter input string: ");
             input = Console.ReadLine();
             //split string by each 3rd number
-            string[] temp = input.Split();
+            var temp = input.SplitInParts(3);
             foreach (string item in temp)
             {
                 temp.Append(item);
@@ -53,5 +53,17 @@ namespace Hack
         {
 
         }
+
+        public static IEnumerable<String> SplitInParts(this String s, Int32 partLength)
+        {
+            if (s == null)
+                throw new ArgumentNullException(nameof(s));
+            if (partLength <= 0)
+                throw new ArgumentException("Part length has to be positive.", nameof(partLength));
+
+            for (var i = 0; i < s.Length; i += partLength)
+                yield return s.Substring(i, Math.Min(partLength, s.Length - i));
+        }
+
     }
 }
