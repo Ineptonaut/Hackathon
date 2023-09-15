@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
 
@@ -32,10 +33,10 @@ namespace Hack
             Console.WriteLine("Enter input string: ");
             input = Console.ReadLine();
             //split string by each 3rd number
-            List<string> temp = new List<string>();
-            for (int i = 0; i <= input.Length; i++)
+            string[] temp = input.Split();
+            foreach (string item in temp)
             {
-                temp.Add(input.split);
+                temp.Append(item);
             }
             //translate ascii codes into plaintext
             string output = "";
