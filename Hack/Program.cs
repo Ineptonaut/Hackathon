@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace Hack
 {
@@ -25,7 +26,23 @@ namespace Hack
 
         public static void decrypt()
         {
-
+            //input string of numbers
+            string input = Console.ReadLine();
+            //split string by each 3rd number
+            List<string> temp = new List<string>();
+            for (int i = 0; i < input.Length; i++)
+            {
+                temp.Add(input.Substring(i, 3));
+            }
+            //translate ascii codes into plaintext
+            string output = "";
+            foreach (var item in temp)
+            {
+                var result = (char.ConvertFromUtf32(int.Parse(item)));
+                output += result;
+            }
+            //reassemble string 
+            Console.WriteLine(output);
         }
 
         public static void encrypt() 
